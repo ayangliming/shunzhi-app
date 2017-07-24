@@ -1,3 +1,57 @@
-body{
+*{
   margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  background: linear-gradient(right top,#FF5196,#F87062);
+}
+.home{
+  width: 100vw;
+  height: 100vh;
+}
+.home img{
+  width: 114px;
+  display: block;
+  margin: 0 auto;
+  padding: 11.78vh 0 6vh 0;
+}
+
+.home h1,.home h5{
+  color: #fff;
+  text-align: center;
+  line-height: 80px;;
+}
+.home h5{
+  font-size: 16px;
+}
+
+.home_boot{
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  margin: 100px 0;
+}
+
+.home_boot a{
+  width: 340px;
+  color: #F67361;
+  background-color: #fff;
+  line-height: 60px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+.home_boot a:last-child{
+  margin-right: 10px;
+}
+
+/*注册*/
+.signup h3{
+  color: #ccc;
+  text-align: center;
+  margin-top: 4.17vh;
 }
