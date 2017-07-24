@@ -12,7 +12,7 @@ class Home  extends Component{
                 <h5>享受舌尖艳遇</h5>
               <div className="home_boot">
                 <Link to="/signup">注册</Link>
-              <Link to="/sidebar">登陆</Link>
+                <Link to="/login">登陆</Link>
 
               </div>
             </div>

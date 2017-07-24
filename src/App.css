@@ -50,8 +50,127 @@ body{
 }
 
 /*注册*/
+.signup{
+  padding: 7.3vh 5.5vh
+}
+
+.header img{
+  float: left;
+  width: 5vw;
+}
 .signup h3{
-  color: #ccc;
+  color: #fffdfe;
+  margin-left: 33.3vw;
+  font-size: 1.77vh;
+}
+.signup h1{
+  font-size: 5.3vh;
+  color: #fff;
   text-align: center;
-  margin-top: 4.17vh;
+  margin-top: 12.86vh
+}
+.signup p{
+  text-align: center;
+  color: #fff;
+  margin-top: 2.60vh;
+  font-size: 2.60vh;
+}
+.signup_form{
+  width: 77.96vw;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 6.62vh;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 1.5vh;
+}
+.signup_form input{
+  width: 77vw;
+  line-height: 8.54vh;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+.signup_form input:last-child{
+  border-bottom: 0;
+}
+.signup span{
+  width: 77.96vw;
+  display: block;
+  background-color:#fff;
+  text-align: center;
+  line-height: 8.95vh;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #F67361;
+}
+
+.signup_bottom{
+  margin-top: 2.43vh;
+  text-align: center;
+  font-size: 1.87vh;
+  color: #fff;
+}
+.signup_bottom a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*登录*/
+.login{
+ padding: 7.3vh 5.5vh;
+}
+.login h3{
+  color: #fffdfe;
+  margin-left: 33.3vw;
+  font-size: 1.77vh;
+}
+.login h1{
+  font-size: 5.3vh;
+  color: #fff;
+  text-align: center;
+  margin-top: 12.86vh
+}
+.login p{
+  text-align: center;
+  color: #fff;
+  margin-top: 2.60vh;
+  font-size: 2.60vh;
+}
+.login_form{
+  width: 77.96vw;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 8.62vh;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 15.60vh;
+}
+.login_form input{
+  width: 77vw;
+  line-height: 8.54vh;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+.login_form input:last-child{
+  border-bottom: 0;
+}
+.login span{
+  width: 77.96vw;
+  display: block;
+  background-color:#fff;
+  text-align: center;
+  line-height: 8.95vh;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #F67361;
+}
+.login_bottom{
+  margin-top: 3.43vh;
+  text-align: center;
+  font-size: 1.87vh;
+  color: #fff;
+}
+.login_bottom a{
+  text-decoration: none;
+  color: #fff;
 }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from "./ui/pages/Home/Home"
 import SignUp from "./ui/pages/SignUp/SignUp"
-import Sidebar from "./ui/shared/Sidebar/Sidebar"
+// import Sidebar from "./ui/shared/Sidebar/Sidebar"
+import Login from "./Login"
 import {
   BrowserRouter as Router,
   Route,
@@ -18,8 +19,8 @@ class App extends Component {
           <div>
           <Switch>
             <Route path="/" exact component={Home}></Route>
-            <Route path="/sidebar" component={Sidebar}></Route>
-            <Route path="/signup" component={SignUp}></Route>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/signUp" component={SignUp}></Route>
           </Switch>
           </div>
         </Router>
