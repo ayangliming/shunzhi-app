@@ -56,7 +56,7 @@ class Sidebar extends Component {
           </div>
           <div className="bm-link-list">
             <Link onClick={this.closeBmMenu} to="/">Home</Link>
-            <Link onClick={this.closeBmMenu} to="/signup">注册</Link>
+            <Link onClick={this.closeBmMenu} to="/profile">个人中心</Link>
             <Link onClick={this.closeBmMenu} to="/cart">购物车</Link>
             <Link onClick={this.closeBmMenu} to="/dishes">猜你喜欢</Link>
           </div>

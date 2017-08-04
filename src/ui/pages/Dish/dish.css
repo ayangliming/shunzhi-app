@@ -46,3 +46,20 @@
   color: #ccc;
   margin-top: 50px;
 }
+.dish-main .dish-cart{
+  margin-top: 20px;
+}
+.dish-sub-title {
+  color: #414141;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-weight: 200;
+  text-align: center;
+}
+.dish-sub-detail {
+  text-align: center;
+  color: #818181;
+  opacity: .8;
+  margin-bottom: 20px;
+}

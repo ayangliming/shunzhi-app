@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import TitleHeader from  "../../shared/TitleHeader/TitleHeader.js"
 import './dish.css'
 import CommentIcon from "./CommentIcon.js"
+import Componentlcon from "../Dishes/CommentIcon.js"
+// import Piechart from "./Piechart.js"
 class Dish extends Component {
 
       buy=(dish)=>{
@@ -44,8 +46,12 @@ class Dish extends Component {
                                 {dish.desc}
                             </div>
                               <div className="dish-cart">
-
-                              </div>
+                                  <Componentlcon color="#ccc" />
+                                  {Object.keys(this.props.comments).filter(id => this.props.comments[id].dish._id === this.props.dishId).length}
+                            </div>
+                        <h1 className="dish-sub-title">营养成分</h1>
+                        <p className="dish-sub-detail">点击各部分查看详情</p>
+                        
                   </div>
              </div>
          </div>
