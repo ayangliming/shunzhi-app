@@ -2,28 +2,36 @@ import React, { Component } from 'react'
 import TitleHeader from '../../shared/TitleHeader/TitleHeader'
 import './dashboard.css'
 import Feeditem from './Feeditem'
-
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 class Dashboard extends Component  {
-  cards = [
-    {username: 'Billie Zhang', comment: '真是好吃'},
-    {username: 'Peter Wang', comment: '不错'},
-    {username: 'Peter Wang', comment: '3星'},
-  ]
   render() {
-    const cardList = this.cards.map((c, index) => {
+    console.log(this.props)
+    const {comments}=this.props
+    const cardList = Object.keys(comments).reverse().map(id => {
       return (
-        <Feeditem key={index} username={c.username} comment={c.comment} />
+        <Feeditem key={id} comment={comments[id]} />
       )
     })
+
+    const noUpdate = (
+      <div className="no-update">
+        暂无好友更新，可以直接去 <Link to="/dishes">购物区</Link> 转转。
+      </div>
+    )
+
     return(
       <div className="dashboard">
         <TitleHeader title="好友更新"/>
-        <div className="feed-wrap">
-          {cardList}
+        <div className="feed-wrap"
+         style={{ 'minHeight': `${window.innerHeight -80}px` }}>
+          {Object.keys(comments).length === 0 ? noUpdate : cardList}
         </div>
       </div>
     )
   }
 }
-
-export default Dashboard
+const mapStateToProps=(state)=>({
+  comments:state.comment.all
+})
+export default connect(mapStateToProps)(Dashboard)

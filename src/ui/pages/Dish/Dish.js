@@ -13,6 +13,7 @@ class Dish extends Component {
 
 
   render(){
+    console.log(this.props.comments)
     if(Object.keys(this.props.dishes).length !== 0) {
       const { dishes } = this.props
       // console.log('----', dishes)
@@ -21,6 +22,7 @@ class Dish extends Component {
       let isIncart =Object.keys(this.props.cartDishes).includes(dishId)
       console.log("....",isIncart)
       let dish = dishes[dishId]
+      console.log(dish)
       return(
          <div className="dish">
            <TitleHeader title={dish.name} />
@@ -55,7 +57,8 @@ class Dish extends Component {
 }
 const mapStateToProps = (state) => ({
   dishes: state.dish.all,
-  cartDishes: state.cart.dishes
+  cartDishes: state.cart.dishes,
+  comments:state.comment.all
 })
 
 export default connect(mapStateToProps)(Dish)

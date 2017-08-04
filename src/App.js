@@ -33,10 +33,17 @@ class App extends Component {
         }
       )
     }
+
     axios.get(`${Settings.host}/dishes`)
     .then(res=>{
       const{dishes}=res.data
       store.dispatch({type:"LOAD_DISHES",dishes})
+    })
+
+    axios.get(`${Settings.host}/comments`)
+    .then(res=>{
+      const {comments}=res.data
+      store.dispatch({type:"LOAD_COMMENTS",comments})
     })
   }
   render() {

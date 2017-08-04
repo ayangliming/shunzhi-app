@@ -1,29 +1,40 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TitleHeader from "../../shared/TitleHeader/TitleHeader.js"
+import Dishcard from "./Dishcard.js"
 
 class Dishes extends Component {
   render(){
+    let settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     const { dishes } = this.props
+      // console.log(dishes)
+      // console.log('+++++', Object.keys(dishes))
+      let slideStr = Object.keys(dishes).map(id=>(
+        <div key={id} className="dish-card-wrap" >
+            <Dishcard dish={dishes[id]} dishId={id} />
+        </div>
+      ))
+        let slide =(
+        <Slider {...settings}>
+          {slideStr}
+        </Slider>
+        )
 
-    if(Object.keys(dishes).length !== 0){
-      console.log(dishes)
-      console.log('+++++', Object.keys(dishes))
       return(
         <div className="dishes">
-          { Object.keys(dishes).map(id => (
-              <li key={id}>
-                <Link to={`/dish/${id}`}>
-                  {dishes[id].name }
-                </Link>
-              </li>
-            ))
-          }
+          <TitleHeader title="猜你喜欢"/>
+          {Object.keys(this.props.dishes).length ===0 ? "" : slide}
         </div>
       )
-    }else{
-      return null
-    }
   }
 }
 

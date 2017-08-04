@@ -3,7 +3,6 @@
 
 .dashboard .feed-wrap {
   background-color: #F9FAFB;
-  border: 2px solid blue;
   min-height: 400px;
 }
 
@@ -28,6 +27,8 @@
   background-color: #fff;
   padding: 10px;
   padding-top: 20px;
+  padding-right: 0;
+  padding-left: 0;
   transition: box-shadow .5s ease;
 }
 
@@ -68,12 +69,12 @@
 
 .dashboard .feed-expand {
   position: absolute;
-  left: 2%;
+  left: 3%;
   top: 180px;
   width: 96%;
   color: white;
   transition: top .5s ease;
-  height: 70px;
+  height: 43px;
   padding-top: 35px;
   padding-bottom: 5px;
   text-align: center;

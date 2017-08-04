@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // import svg from './comment.svg'
 import { Link } from 'react-router-dom'
 import CommentIcon from '../../icons/CommentIcon'
-
+import moment from 'moment'
 
 
 class FeedItem extends Component {
@@ -19,10 +19,12 @@ class FeedItem extends Component {
   }
 
   render() {
+    const {comment}=this.props
+    // console.log(comment)
     return(
       <div className={`feed-item ${this.state.expand  ? 'expand' : ''}`}>
         <div className="feed-expand">
-          评论内容
+          {comment.content}
         </div>
         <div className="feed-card">
           <div className="feed-card-header">
@@ -30,10 +32,10 @@ class FeedItem extends Component {
               <img src="http://media.haoduoshipin.com/yummy/default-avatar.png"  alt="avtar" />
                 <div className="feed-user-info">
                   <div className="feed-username">
-                    happypeter
+                    {comment.user.username}
                   </div>
                   <div className="feed-time">
-                    2017年
+                  {moment(comment.createdAt).fromNow()}
                   </div>
                 </div>
             </div>
@@ -43,8 +45,8 @@ class FeedItem extends Component {
                 <CommentIcon color={ this.state.expand ? '#FE5196' : '#D0D0D0'}/>
             </div>
           </div>
-          <Link   style={{ 'backgroundImage': `url(http://media.haoduoshipin.com/yummy/dishes/dish1.jpg)`}}
-            to={`/dish/597be20c2bbfdbaa14bfa248`} className='feed-dish'>
+          <Link   style={{ 'backgroundImage': `url(${comment.dish.poster})`}}
+            to={`/dish/${comment.dish._id}`} className='feed-dish'>
           </Link>
       </div>
     </div>
