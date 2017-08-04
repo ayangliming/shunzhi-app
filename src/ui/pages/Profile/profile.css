@@ -16,6 +16,7 @@
 .profile{
   display: flex;
   padding: 20px;
+  border: 1px solid red;
 }
 .profile .profile-label{
   width: 100px;
@@ -34,4 +35,43 @@
   outline: 0;
   /*去黄框*/
   border: 0;
+}
+
+.profile-username-slogan{
+  padding: 10px;
+  color: white;
+  flex-grow: 1;
+}
+.profile-username {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.profile-slogan {
+  font-size: 15px;
+  opacity: .8;
+}
+.profile-edit{
+  padding: 25px 10px;
+}
+.profile-form button{
+  color: white;
+  outline: 0;
+  background: none;
+  border: none;
+}
+.profile-slogan-input {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 15px;
+}
+.profile-slogan-input:focus {
+  border: 0;
+  border-bottom: 1px solid white;
+  outline: 0;
+}
+.profile-slogan-input::placeholder {
+  color: white;
+  font-size: 15px;
 }
