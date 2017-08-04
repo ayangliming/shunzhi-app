@@ -34,6 +34,12 @@ class App extends Component {
       )
     }
 
+    axios.get(`${Settings.host}/users`)
+    .then(res=>{
+      store.dispatch({type:"LOAD_USERS",users:res.data.users})
+    })
+
+
     axios.get(`${Settings.host}/dishes`)
     .then(res=>{
       const{dishes}=res.data
