@@ -16,7 +16,6 @@
 .profile{
   display: flex;
   padding: 20px;
-  border: 1px solid red;
 }
 .profile .profile-label{
   width: 100px;

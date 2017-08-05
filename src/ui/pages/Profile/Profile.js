@@ -4,6 +4,7 @@ import TitleHeader from "../../shared/TitleHeader/TitleHeader.js"
 import ProfileEditable from "./ProfileEditable.js"
 import { Link } from 'react-router-dom'
 import "./profile.css"
+import  Userlist from "./Userlist.js"
 class Profile extends Component {
   render(){
     if (this.props.isAuthenticated !==true) {
@@ -14,16 +15,18 @@ class Profile extends Component {
         )
     }else {
 
-    let userId = localStorage.getItem('userId')
+      let userId = localStorage.getItem('userId')
     if (Object.keys(this.props.users).length!==0) {
+
       const {users}=this.props
       console.log(users);
-      const {user}=users[userId]
-      console.log(user);
+      const user = users[userId]
+      // console.log(user)
     return(
       <div>
         < TitleHeader title="个人中心"　/>
-        <ProfileEditable />
+        <ProfileEditable user={user} userId={userId}/>
+        <Userlist users={users}/>
       </div>
       )
     }else{
