@@ -4,7 +4,8 @@ import TitleHeader from  "../../shared/TitleHeader/TitleHeader.js"
 import './dish.css'
 import CommentIcon from "./CommentIcon.js"
 import Componentlcon from "../Dishes/CommentIcon.js"
-// import Piechart from "./Piechart.js"
+import Piechart from "./PieChart.js"
+import AreaChart from './AreChart.js'
 class Dish extends Component {
 
       buy=(dish)=>{
@@ -17,7 +18,7 @@ class Dish extends Component {
   render(){
     console.log(this.props.comments)
     if(Object.keys(this.props.dishes).length !== 0) {
-      const { dishes } = this.props
+      const { dishes,comments} = this.props
       // console.log('----', dishes)
       const { dishId } = this.props.match.params
         // console.log('===+++===', dishId)
@@ -50,8 +51,15 @@ class Dish extends Component {
                                   {Object.keys(this.props.comments).filter(id => this.props.comments[id].dish._id === this.props.dishId).length}
                             </div>
                         <h1 className="dish-sub-title">营养成分</h1>
-                        <p className="dish-sub-detail">点击各部分查看详情</p>
-                        
+                        <Piechart />
+                        <h1 className="dish-sub-title">销售额</h1>
+                        <p className="dish-sub-detail">单位：份</p>
+                        <AreaChart />
+                        <h1 className="dish-sub-title">评论区</h1>
+                            <p className="dish-sub-detail">
+                              评论数：
+                              { Object.keys(comments).filter(id => comments[id].dish._id === dishId).length }
+                            </p>
                   </div>
              </div>
          </div>

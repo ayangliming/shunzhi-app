@@ -10,7 +10,7 @@ const data = [{name: '水分', value: 200}, {name: '糖分', value: 100},
 const COLORS = ['#f4baba', '#e0cd84', '#91e1dd', '#a48ad4'];
 
 
-class Piechart extends Component {
+class MyPieChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,4 +82,4 @@ class Piechart extends Component {
   }
 }
 
-export default Piechart
+export default MyPieChart

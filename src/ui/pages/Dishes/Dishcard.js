@@ -6,7 +6,7 @@ import CommentIcon from "./CommentIcon.js"
 class Dishcard extends Component {
   render(){
     const {dish}=this.props
-    console.log(dish);
+    // console.log(dish);
     // console.log(this.props.dishId);
     return(
       <Link to={ `/dish/${this.props.dishId}`} className="dish-card">

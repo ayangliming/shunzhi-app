@@ -1,5 +1,4 @@
 .dish-info {
-  border: 3px solid red;
   min-height: 300px;
   margin-top: 80px;
   background-color: #F9FAFB;
@@ -29,7 +28,7 @@
   margin-top: 20px;
 }
 .dish-main{
-  border: 2px solid yellow;
+
 }
 .dish-main>h2{
   padding-top: 30px;
