@@ -15,6 +15,7 @@ import Cart from './ui/pages/Cart/Cart'
 import Profile from './ui/pages/Profile/Profile'
 import Dishes from './ui/pages/Dishes/Dishes'
 import CartButton from "./ui/shared/CartButton/CartButton.js"
+import User from "./ui/pages/User/User.js"
 import {
   BrowserRouter as Router,
   Route,
@@ -69,6 +70,7 @@ class App extends Component {
                 <Route path="/login"  component={Login} />
                 <Route path="/dashboard" component={Dashboard} />
                 <Route path="/dish/:dishId" component={Dish} />
+                <Route path="/user/:userId" component={User} />
                 <Route path="/cart"  component={Cart} />
                 <Route path="/dishes"  component={Dishes} />
                 <Route path="/profile" component={Profile} />

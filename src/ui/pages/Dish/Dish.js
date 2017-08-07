@@ -6,6 +6,8 @@ import CommentIcon from "./CommentIcon.js"
 import Componentlcon from "../Dishes/CommentIcon.js"
 import Piechart from "./PieChart.js"
 import AreaChart from './AreChart.js'
+import Comment from "./Comment.js"
+
 class Dish extends Component {
 
       buy=(dish)=>{
@@ -60,6 +62,7 @@ class Dish extends Component {
                               评论数：
                               { Object.keys(comments).filter(id => comments[id].dish._id === dishId).length }
                             </p>
+                            < Comment dishId={dishId} />
                   </div>
              </div>
          </div>

@@ -71,6 +71,9 @@ class Piechart extends Component {
           }
         </Pie>
         </PieChart>
+      <div>
+        {items}
+      </div>
       </div>
     );
   }
