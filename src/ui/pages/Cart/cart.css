@@ -41,3 +41,18 @@
   text-align: center;
   color: #FFFFFF;
 }
+.cart-shoop{
+  position: relative;
+  width: 60%;
+  height: 10vh;
+  color: #5c0f0f;
+  margin: auto;
+  padding-top: 40%;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 50px;
+  font-size: 50px;
+}
+.cart-shoop a{
+  color: #1f6b6e
+}

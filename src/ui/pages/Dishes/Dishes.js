@@ -5,16 +5,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TitleHeader from "../../shared/TitleHeader/TitleHeader.js"
 import Dishcard from "./Dishcard.js"
-
+import './dishes.css'
 class Dishes extends Component {
   render(){
     let settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      }
     const { dishes } = this.props
       // console.log(dishes)
       // console.log('+++++', Object.keys(dishes))

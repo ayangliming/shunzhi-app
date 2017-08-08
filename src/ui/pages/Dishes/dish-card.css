@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .dish-card .dish-card-poster {
   width: 100%;
   height: 210px;
@@ -14,12 +15,18 @@
   background-position: center center;
   background-size: 370px;
 }
+
 .dish-card-detail {
   padding: 0 10px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
+
+.dish-card-detail>* {
+}
+
+
 .dish-card h1.dish-name {
   text-align: center;
   font-size: 26px;
@@ -27,20 +34,12 @@
   line-height: 32px;
   margin-top: 45px;
 }
-.price-tag{
-  text-align: center;
-  margin-top: 20px;
-  color: #000;
-}
-.price-tag span.unit{
-  color: red;
-}
+
 .dish-card-icon-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
-  margin-top: 30px;
 }
 
 .dish-card-icon-inner {
@@ -58,13 +57,24 @@
   line-height: 20px;
   color: #D0D0D0;
 }
+
+
+.dish-card .price-tag {
+  color: #878787;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dish-card .price-tag span.unit {
+  color: #F77062;
+}
+
 .dish-card .dish-desc {
   font-size: 14px;
   color: #878787;
   text-align: center;
   line-height: 24px;
   position: relative;
-  margin-top: 30px;
 }
 
 .dish-desc-mask {
@@ -74,5 +84,4 @@
   right: 0;
   bottom: 0;
   background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
-
 }

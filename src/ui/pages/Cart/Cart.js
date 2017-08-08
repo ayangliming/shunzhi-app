@@ -36,7 +36,7 @@ class Cart extends Component {
         )
       }else{
         return(
-          <div>
+          <div className="cart-shoop">
             购物车是空的
             <Link to="/dishes">去购物</Link>
           </div>

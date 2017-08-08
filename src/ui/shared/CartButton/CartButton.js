@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 class CartButton extends Component {
 
   render() {
-
+    console.log(this.props.isAuthenticated);
     let styles = {
       button: {
         'display': this.props.total === 0 ? 'none' : 'block',
@@ -41,22 +41,30 @@ class CartButton extends Component {
         'color': 'white'
       }
     }
-    return(
-      <Link to="/cart" style={styles.button}
-      className="cart-button">
-        <div style={styles.cartNo}
-          className="cart-no">
-          {this.props.total}
-        </div>
-        <img style={styles.img}
-        src={cartIcon} alt="icon" />
-    </Link>
-    )
+
+      if (this.props.isAuthenticated !==false) {
+        return(
+            <Link to="/cart" style={styles.button}
+            className="cart-button">
+              <div style={styles.cartNo}
+                className="cart-no">
+                {this.props.total}
+              </div>
+              <img style={styles.img}
+              src={cartIcon} alt="icon" />
+          </Link>
+        )
+    }else{
+      return null
+    }
+
+
   }
 }
 
 const mapStateToProps = (state) => ({
-  total: state.cart.total
+  total: state.cart.total,
+  isAuthenticated:state.account.isAuthenticated
 })
 
 export default connect(mapStateToProps)(CartButton)
