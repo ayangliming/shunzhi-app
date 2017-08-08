@@ -12,7 +12,7 @@ class UserList extends Component {
   }
 
   toggleFollow = () => {
-    // TODO
+    //TODO
   }
 
   render(){

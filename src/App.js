@@ -17,7 +17,7 @@ import Dishes from './ui/pages/Dishes/Dishes'
 import CartButton from "./ui/shared/CartButton/CartButton.js"
 import User from "./ui/pages/User/User.js"
 import {
-  HashRouter as Router,
+  HashRouter,
   Route,
   Switch
 } from 'react-router-dom'
@@ -58,7 +58,7 @@ class App extends Component {
       <Provider store={store}>
         <div>
           <AlertBox />
-          <Router>
+          <HashRouter>
             <div>
               <Route render={({ location }) => {
                   return location.pathname !== '/' ?
@@ -77,7 +77,7 @@ class App extends Component {
               </Switch>
               <CartButton />
             </div>
-          </Router>
+          </HashRouter>
         </div>
       </Provider>
     );
